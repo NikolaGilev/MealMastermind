@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'post_screen.dart';
 import 'home_screen.dart';
+import 'messages_screen.dart';
 import 'search_screen.dart';
-// import 'post_screen.dart';
-// import 'messages_screen.dart';
-// import 'profile_screen.dart';
+import 'profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -15,9 +15,9 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
     SearchScreen(),
-    // PostScreen(),
-    // MessagesScreen(),
-    // ProfileScreen(),
+    PostScreen(),
+    MessagesScreen(),
+    ProfileScreen(),
   ];
 
   void _onTabTapped(int index) {
@@ -55,9 +55,9 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Profile',
           ),
         ],
-        selectedItemColor: Colors.black, // Optional: Color for the selected item
-        unselectedItemColor: Colors.grey, // Color for unselected items
-        type: BottomNavigationBarType.fixed, // Fixes the bottom bar to prevent shifting
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }

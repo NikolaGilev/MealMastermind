@@ -1,0 +1,4 @@
+#Sun Sep 01 16:31:47 CEST 2024
+base.0=C\:\\Users\\kok1_\\AndroidStudioProjects\\meal_mastermind\\DartApp\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

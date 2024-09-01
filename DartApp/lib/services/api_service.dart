@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:io';
 import 'package:meal_mastermind/models/recipe.dart';
 import 'package:meal_mastermind/utils/constants.dart';
 
@@ -48,4 +49,66 @@ class APIService {
       throw Exception('Failed to load recipe details');
     }
   }
+
+  Future<bool> postRecipe(Recipe recipe, File? imageFile) async {
+    var request = http.MultipartRequest('POST', Uri.parse('YOUR_API_ENDPOINT'));
+
+    request.fields['id'] = recipe.id.toString();
+    request.fields['title'] = recipe.title;
+    request.fields['author'] = recipe.author;
+    request.fields['description'] = recipe.description;
+    request.fields['datePosted'] = recipe.datePosted;
+    request.fields['preparationTime'] = recipe.preparationTime.toString(); // Convert to string
+    request.fields['likes'] = recipe.likes.toString(); // Convert to string
+    request.fields['ingredients'] = json.encode(recipe.ingredients); // Convert list to JSON string
+    request.fields['instructions'] = json.encode(recipe.instructions); // Convert list to JSON string
+    request.fields['nutritionalInfo'] = json.encode(recipe.nutritionalInfo); // Convert map to JSON string
+    request.fields['rating'] = recipe.rating.toString(); // Convert to string
+
+    if (imageFile != null) {
+      var pic = await http.MultipartFile.fromPath('image', imageFile.path);
+      request.files.add(pic);
+    }
+
+    var response = await request.send();
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // Method to update likes for a recipe
+  Future<bool> updateLikes(int recipeId, int increment) async {
+    final response = await http.post(
+      Uri.parse('$apiUrl/recipes/$recipeId/likes'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'increment': increment}),
+    );
+
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      print('Failed to update likes: ${response.statusCode}');
+      return false;
+    }
+  }
+
+  // Method to add a comment to a recipe
+  Future<bool> addComment(int recipeId, String author, String content) async {
+    final response = await http.post(
+      Uri.parse('$apiUrl/recipes/$recipeId/comments'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'author': author, 'content': content, "date": DateTime.now().toString().split(' ')[0]}),
+    );
+
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      print('Failed to add comment: ${response.statusCode}');
+      return false;
+    }
+  }
+
+
 }

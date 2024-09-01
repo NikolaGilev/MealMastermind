@@ -6,13 +6,14 @@ class Recipe {
   final String author;
   final String description;
   final String datePosted;
-  final String preparationTime;
-  final String likes;
+  final int preparationTime;
+  final int likes;
   final String imageUrl;
-  final String ingredients;
-  final String instructions;
-  final String nutritionalInfo;
+  final List<Map<String, dynamic>> ingredients;
+  final List<String> instructions;
+  final Map<String, dynamic> nutritionalInfo;
   final double rating;
+  final List<Map<String, dynamic>> comments; // New field for comments
 
   Recipe({
     required this.id,
@@ -27,7 +28,9 @@ class Recipe {
     required this.instructions,
     required this.nutritionalInfo,
     required this.rating,
+    this.comments = const [], // Initialize comments as empty list by default
   });
+
   factory Recipe.fromJson(Map<String, dynamic> json) {
     return Recipe(
       id: json['id'],
@@ -38,9 +41,10 @@ class Recipe {
       preparationTime: json['preparationTime'],
       likes: json['likes'],
       imageUrl: json['imageUrl'],
-      ingredients: json['ingredients'],
-      instructions: json['instructions'],
-      nutritionalInfo: json['nutritionalInfo'],
+      ingredients: List<Map<String, dynamic>>.from(json['ingredients'] ?? []),
+      instructions: List<String>.from(json['instructions'] ?? []),
+      nutritionalInfo: Map<String, dynamic>.from(json['nutritionalInfo'] ?? {}),
+      comments: List<Map<String, dynamic>>.from(json['comments'] ?? []), // Provide default empty list if null
       rating: json['rating'].toDouble(),
     );
   }
@@ -57,6 +61,7 @@ class Recipe {
     'ingredients': recipe.ingredients,
     'instructions': recipe.instructions,
     'nutritionalInfo': recipe.nutritionalInfo,
+    'comments': recipe.comments, // Convert comments to JSON
     'rating': recipe.rating,
   };
 
@@ -65,5 +70,7 @@ class Recipe {
   );
 
   static List<Recipe> decode(String recipes) =>
-      (json.decode(recipes) as List<dynamic>).map<Recipe>((item) => Recipe.fromJson(item)).toList();
+      (json.decode(recipes) as List<dynamic>)
+          .map<Recipe>((item) => Recipe.fromJson(item))
+          .toList();
 }
