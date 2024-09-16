@@ -85,7 +85,6 @@ class _PostScreenState extends State<PostScreen> {
       _instructions.add(TextEditingController());
     });
   }
-
   void _submitRecipe() async {
     if (_formKey.currentState!.validate()) {
       setState(() {
@@ -121,6 +120,9 @@ class _PostScreenState extends State<PostScreen> {
       // Call API to save the recipe
       bool success = await apiService.postRecipe(newRecipe, _imageFile);
 
+      // Check if the widget is still mounted before calling setState()
+      if (!mounted) return;
+
       setState(() {
         _isPosting = false;
       });
@@ -138,6 +140,7 @@ class _PostScreenState extends State<PostScreen> {
       }
     }
   }
+
 
   Widget _buildPostingOverlay() {
     return Container(
