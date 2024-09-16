@@ -132,27 +132,26 @@ Contains reusable UI components used across multiple screens.
 ### Home Screen
 1. **Browse Recipes**: Upon loading, the home screen will display a list of recipes fetched from the API. Each recipe is displayed in a card format showing the title and rating.
 2. **Search**: Use the search bar at the top to filter recipes by name.
-![image](https://github.com/user-attachments/assets/a3d4f415-a3f2-4ac0-91de-279addeae131)
-![image](https://github.com/user-attachments/assets/dd2e7c8e-0c7f-49ed-9fe1-8b72902ead82)
+<img src="https://github.com/user-attachments/assets/a3d4f415-a3f2-4ac0-91de-279addeae131" width="400"/>
+<img src="https://github.com/user-attachments/assets/dd2e7c8e-0c7f-49ed-9fe1-8b72902ead82" width="400"/>
 
 ### Recipe Detail Screen
 1. **View Full Recipe**: This screen displays detailed information about the recipe selected from the home screen.
 2. **Rate the Recipe**: Users can leave a rating for the recipe, which will update the overall rating displayed.
-![image](https://github.com/user-attachments/assets/2e9209fb-66b8-4b9a-abac-a5d97b1ce65f)
-![image](https://github.com/user-attachments/assets/4e32bf9b-61f8-4f7e-85bf-a5138a698059)
+<img src="https://github.com/user-attachments/assets/2e9209fb-66b8-4b9a-abac-a5d97b1ce65f" width="400"/>
+<img src="https://github.com/user-attachments/assets/4e32bf9b-61f8-4f7e-85bf-a5138a698059" width="400"/>
 
 ### Add New Recipe Screen
 1. **Post A Recipe**: This screen has inputs for all the necessary fields to create a recepie.
-![image](https://github.com/user-attachments/assets/abc39d30-ef25-4acd-bfd3-4a827fe1554b)
-![image](https://github.com/user-attachments/assets/d34a3c97-ec28-4a33-bbed-fd28920e39b9)
-
+<img src="https://github.com/user-attachments/assets/abc39d30-ef25-4acd-bfd3-4a827fe1554b" width="400"/>
+<img src="https://github.com/user-attachments/assets/d34a3c97-ec28-4a33-bbed-fd28920e39b9" width="400"/>
 
 ### Login Screen
 1. **Login**: Use your email and password to log in and access personalized features such as saving favorite recipes.
 
 ### Map Screen
 1. **View Location**: This screen shows a map with a specific location marked. The location is based on latitude and longitude coordinates passed into the screen.
-![image](https://github.com/user-attachments/assets/172547ff-a76b-4181-a184-33860ce2ffb7)
+<img src="https://github.com/user-attachments/assets/172547ff-a76b-4181-a184-33860ce2ffb7" width="400"/>
 
 ### Map Picker Screen
 1. **Select a Location**: Users can interact with the map to select a location. The selected latitude and longitude are stored and can be used for other functionalities like saving or sending locations.
