@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
-  final String userName = 'John Doe';
-  final String userEmail = 'john.doe@example.com';
+  final String userName = 'Nikola Gilev';
+  final String userEmail = 'nikola.gilev@gmail.com';
   final String userImageUrl = 'https://via.placeholder.com/150'; // Placeholder image URL
 
   @override

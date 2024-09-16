@@ -35,6 +35,18 @@ class MessagesScreen extends StatelessWidget {
     {
       'name': 'Emma Brown',
     },
+    {
+      'name': 'Jane Smith',
+    },
+    {
+      'name': 'Alex Johnson',
+    },
+    {
+      'name': 'Chris Williams',
+    },
+    {
+      'name': 'Emma Brown',
+    },
   ];
 
   @override

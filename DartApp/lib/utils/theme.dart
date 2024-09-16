@@ -7,8 +7,8 @@ final ThemeData appTheme = ThemeData(
     secondary: Colors.orange,
   ),
   textTheme: const TextTheme(
-    headline6: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
-    bodyText2: TextStyle(fontSize: 14.0, color: Colors.black),
+    titleLarge: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
+    bodyMedium: TextStyle(fontSize: 14.0, color: Colors.black),
   ),
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.white,

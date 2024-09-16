@@ -51,19 +51,21 @@ class APIService {
   }
 
   Future<bool> postRecipe(Recipe recipe, File? imageFile) async {
-    var request = http.MultipartRequest('POST', Uri.parse('YOUR_API_ENDPOINT'));
+    var request = http.MultipartRequest('POST', Uri.parse('$apiUrl/recipes'));
 
     request.fields['id'] = recipe.id.toString();
     request.fields['title'] = recipe.title;
     request.fields['author'] = recipe.author;
     request.fields['description'] = recipe.description;
     request.fields['datePosted'] = recipe.datePosted;
-    request.fields['preparationTime'] = recipe.preparationTime.toString(); // Convert to string
-    request.fields['likes'] = recipe.likes.toString(); // Convert to string
-    request.fields['ingredients'] = json.encode(recipe.ingredients); // Convert list to JSON string
-    request.fields['instructions'] = json.encode(recipe.instructions); // Convert list to JSON string
-    request.fields['nutritionalInfo'] = json.encode(recipe.nutritionalInfo); // Convert map to JSON string
-    request.fields['rating'] = recipe.rating.toString(); // Convert to string
+    request.fields['preparationTime'] = recipe.preparationTime.toString();
+    request.fields['likes'] = recipe.likes.toString();
+    request.fields['ingredients'] = json.encode(recipe.ingredients);
+    request.fields['instructions'] = json.encode(recipe.instructions);
+    request.fields['nutritionalInfo'] = json.encode(recipe.nutritionalInfo);
+    request.fields['rating'] = recipe.rating.toString();
+    request.fields['longitude'] = recipe.longitude.toString();
+    request.fields['latitude'] = recipe.latitude.toString();
 
     if (imageFile != null) {
       var pic = await http.MultipartFile.fromPath('image', imageFile.path);
