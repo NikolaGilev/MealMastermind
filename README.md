@@ -13,7 +13,8 @@ The app interacts with a custom API that supplies recipe data and allows users t
 ### Prerequisites:
 - **Flutter SDK** (ensure you have the latest version installed)
 - **Dart SDK** (comes with the Flutter SDK)
-- **Android Studio or VS Code** (with Flutter plugins)
+- **Android Studio** (with Flutter plugins)
+- **Node.js**
 
 ### Step 1: Clone the Repository
 Clone the project repository to your local machine.
@@ -35,6 +36,15 @@ flutter run
 ```
 
 ---
+
+## Technologies Used
+
+Flutter: UI toolkit for building natively compiled applications.
+Dart: Programming language optimized for building UIs.
+flutter_map: Package for displaying maps in Flutter.
+Node.js API: Backend service providing recipe data.
+faker.js: Package for generating random data by category.
+
 
 ## Project Structure
 
