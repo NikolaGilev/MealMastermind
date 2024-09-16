@@ -14,6 +14,8 @@ class Recipe {
   final Map<String, dynamic> nutritionalInfo;
   final double rating;
   final List<Map<String, dynamic>> comments; // New field for comments
+  final String latitude;
+  final String longitude;
 
   Recipe({
     required this.id,
@@ -29,6 +31,8 @@ class Recipe {
     required this.nutritionalInfo,
     required this.rating,
     this.comments = const [], // Initialize comments as empty list by default
+    this.latitude = "",
+    this.longitude = "",
   });
 
   factory Recipe.fromJson(Map<String, dynamic> json) {
@@ -46,6 +50,8 @@ class Recipe {
       nutritionalInfo: Map<String, dynamic>.from(json['nutritionalInfo'] ?? {}),
       comments: List<Map<String, dynamic>>.from(json['comments'] ?? []), // Provide default empty list if null
       rating: json['rating'].toDouble(),
+      latitude: json['latitude'],
+      longitude: json['longitude'],
     );
   }
 
@@ -63,6 +69,8 @@ class Recipe {
     'nutritionalInfo': recipe.nutritionalInfo,
     'comments': recipe.comments, // Convert comments to JSON
     'rating': recipe.rating,
+    'latitude': recipe.latitude,
+    'longitude': recipe.longitude,
   };
 
   static String encode(List<Recipe> recipes) => json.encode(

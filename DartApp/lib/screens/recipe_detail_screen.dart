@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/recipe.dart';
 import '../services/api_service.dart';
+import 'map_screen.dart';
 
 class RecipeDetailScreen extends StatefulWidget {
   final Recipe recipe;
@@ -214,6 +215,28 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                   // Add Comment Section
                   const SizedBox(height: 16.0),
                   _buildAddCommentSection(context),
+
+                  // Location Section
+                  const SizedBox(height: 16.0),
+                  Row(
+                    children: [
+                      Icon(Icons.location_on, color: Colors.red),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MapScreen(
+                                latitude: double.tryParse(widget.recipe.latitude) ?? 0.0,
+                                longitude: double.tryParse(widget.recipe.longitude) ?? 0.0,
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text('View on Map'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

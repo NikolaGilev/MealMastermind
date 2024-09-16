@@ -35,7 +35,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 25,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.992717",
+    "longitude": "21.418731"
   },
   {
     "id": 2,
@@ -67,7 +69,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 20,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.008938",
+    "longitude": "21.415591"
   },
   {
     "id": 3,
@@ -103,7 +107,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 30,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.004822",
+    "longitude": "21.397118"
   },
   {
     "id": 4,
@@ -137,7 +143,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 25,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.992836",
+    "longitude": "21.407169"
   },
   {
     "id": 5,
@@ -171,7 +179,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 20,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.000938",
+    "longitude": "21.404080"
   },
   {
     "id": 6,
@@ -208,7 +218,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 25,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.998850",
+    "longitude": "21.427333"
   },
   {
     "id": 7,
@@ -243,7 +255,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 25,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.010556",
+    "longitude": "21.402677"
   },
   {
     "id": 8,
@@ -280,7 +294,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 30,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.992390",
+    "longitude": "21.406981"
   },
   {
     "id": 9,
@@ -316,7 +332,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 15,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.993659",
+    "longitude": "21.422059"
   },
   {
     "id": 10,
@@ -349,7 +367,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 20,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.005831",
+    "longitude": "21.408367"
   },
   {
     "id": 11,
@@ -388,7 +408,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 30,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.002511",
+    "longitude": "21.424275"
   },
   {
     "id": 12,
@@ -427,7 +449,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 35,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.008097",
+    "longitude": "21.403643"
   },
   {
     "id": 13,
@@ -462,7 +486,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 15,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "41.999583",
+    "longitude": "21.414789"
   },
   {
     "id": 14,
@@ -500,7 +526,9 @@
     "datePosted": "2024-08-31",
     "preparationTime": 25,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.001350",
+    "longitude": "21.420628"
   },
   {
     "id": 15,
@@ -537,6 +565,8 @@
     "datePosted": "2024-08-31",
     "preparationTime": 30,
     "likes": 25,
-    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}]
+    "comments": [{"author":"Andrej Kostev", "content": "Nice one +1!", "date": "24.08.2024"}],
+    "latitude": "42.006974",
+    "longitude": "21.413037"
   }
 ]

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:latlong2/latlong.dart';
 import 'dart:io';
 import '../models/recipe.dart';
 import '../services/api_service.dart';
+import 'map_picker_screen.dart';
 
 class PostScreen extends StatefulWidget {
   @override
@@ -15,6 +17,22 @@ class _PostScreenState extends State<PostScreen> {
   final _formKey = GlobalKey<FormState>();
   final APIService apiService = APIService();
   bool _isPosting = false;
+  LatLng? _selectedLocation; // To store selected location
+
+  // function to open the map picker
+  Future<void> _pickLocation() async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => MapPickerScreen(),
+      ),
+    );
+    if (result != null) {
+      setState(() {
+        _selectedLocation = result;
+      });
+    }
+  }
 
   // Recipe details controllers
   final TextEditingController _titleController = TextEditingController();
@@ -96,6 +114,8 @@ class _PostScreenState extends State<PostScreen> {
           'carbs': int.parse(_carbsController.text),
         },
         rating: 0.0,
+        latitude: _selectedLocation != null ? _selectedLocation!.latitude.toString() : "",
+        longitude: _selectedLocation != null ? _selectedLocation!.longitude.toString() : "",
       );
 
       // Call API to save the recipe
@@ -320,6 +340,12 @@ class _PostScreenState extends State<PostScreen> {
                       }
                       return null;
                     },
+                  ),
+                  ElevatedButton(
+                    onPressed: _pickLocation,
+                    child: Text(_selectedLocation == null
+                        ? 'Select Location'
+                        : 'Location Selected: (${_selectedLocation!.latitude}, ${_selectedLocation!.longitude})'),
                   ),
                   SizedBox(height: 20.0),
                   Center(
